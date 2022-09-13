@@ -24,6 +24,7 @@ galaxy_info:
         - groovy
         - hirsute
         - impish
+        - jammy
     - name: EL
       versions:
         - 8
