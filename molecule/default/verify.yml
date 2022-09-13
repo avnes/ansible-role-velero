@@ -1,0 +1,25 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Set download directory for all users to use
+      ansible.builtin.set_fact:
+        velero_runtime_dir: "/usr/local/bin"
+
+    - name: Find the velero file
+      ansible.builtin.stat:
+        path: "{{ velero_runtime_dir }}/velero"
+      register: velero_file
+
+    - name: Print stat info
+      ansible.builtin.debug:
+        msg: "{{ velero_file.stat }}"
+
+    - name: Assert that velero exists
+      ansible.builtin.assert:
+        that: velero_file.stat.exists
+
+    - name: Assert that velero is executable
+      ansible.builtin.assert:
+        that: velero_file.stat.executable

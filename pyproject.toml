@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ansible-role-velero"
+version = "0.1.0"
+description = "Ansible role for installing velero on Linux"
+authors = ["Audun Nes <audun.nes@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ansible = "^6.0.0"
+
+[tool.poetry.dev-dependencies]
+ansible-lint = "^6.0.0"
+flake8 = "^5.0.0"
+yamllint = "^1.26.3"
+molecule-docker = "^2.0.0"
+molecule = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
