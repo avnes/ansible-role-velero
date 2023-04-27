@@ -3,31 +3,19 @@ galaxy_info:
   role_name: velero
   author: avnes
   description: Will install velero
-  company:
-
   license: license (MIT)
-
-  min_ansible_version: 2.11
+  min_ansible_version: "2.11"
 
   platforms:
     - name: Fedora
       versions:
-        - 35
-        - 36
+        - all
     - name: Ubuntu
       versions:
-        - bionic
-        - cosmic
-        - disco
-        - eoan
-        - focal
-        - groovy
-        - hirsute
-        - impish
-        - jammy
+        - all
     - name: EL
       versions:
-        - 8
+        - all
 
   galaxy_tags:
     - kubernetes
